@@ -1,13 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Tri Hantoro</title>
+    <title>Tri Hantoro's Profile</title>
+    <link rel="shortcut icon" href="media/Logo_TH.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #top-nav { 
+            border-bottom: 0.1em solid white;
+        }
+        .has-background-transparent {
+            background: none;
+        }
+        #educations {
+            background-image: url('media/hexagons-pixabay.png');
+        }
+    </style>
 </head>
-<body>
-    <a href="pushing_github.txt">GIT Push Command</a>
-    <h1>Hello World</h1>
+<body>      
+    <nav class="navbar is-fixed-top is-info" id="top-nav">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="navbar-item ml-2">
+                    <figure class="image is-32x32">
+                        <img src="media/Logo_TH.png" alt="">
+                    </figure>
+                </div>
+                <div class="navbar-burger" id="menu-burger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="navbar-menu" id="main-menu">
+                <div class="navbar-start">
+                    <a onclick="scrollToTop()" class="navbar-item">About Me</a>
+                    <a href="#educations" class="navbar-item">Educations &amp; Skills</a>
+                    <a href="#experiences" class="navbar-item">Experiences</a>
+                    <a href="#projects" class="navbar-item">Projects</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-fullheight-with-navbar has-background-info is-family-secondary" id="aboutme">
+        <div class="hero-body">
+            <div class="container px-6">
+                <div class="columns">
+                    <div class="column is-3-desktop is-5-tablet mx-4">
+                        <div class="card is-shadowless has-background-black">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="./media/Pass_Photo_Tri_Hantoro.jpeg" alt="Cool guy">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content has-text-centered">
+                                    <p class="title has-text-white">Tri Hantoro</p>
+                                    <p class="subtitle has-text-info">Oracle Technical Consultant</p>
+                                </div>
+                            </div>
+                            <footer class="card-footer py-2" style="border-color: hsl(204, 86%, 53%);">
+                                <a href="#" class="card-footer-item has-text-info" style="border: 0;">
+                                    <span class="icon"><i class="fab fa-linkedin fa-2x"></i></span>
+                                </a>
+                                <a href="#" class="card-footer-item has-text-danger" style="border: 0;">
+                                    <span class="icon"><i class="fab fa-instagram fa-2x"></i></span>
+                                </a>
+                                <span class="card-footer-item has-text-warning-dark">
+                                    <span class="icon"><i class="fab fa-medium fa-2x"></i></span>
+                                </span>
+                            </footer>
+                        </div></div>
+                    <div class="column mx-4">
+                        <div class="card is-shadowless has-background-transparent has-text-white has-text-weight-semibold">
+                            <div class="card-header is-shadowless">
+                                <p class="card-header-title title has-text-white">About Me</p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content px-4">
+                                    <div class="columns is-multiline">
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <p><span class="label has-text-white">Age:</span><span id="age">38</span> Years</p>
+                                        </div>
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <p><span class="label has-text-white">Location:</span>Jakarta, Indonesia</p>
+                                        </div>
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <p><span class="label has-text-white">Postal Code:</span>12830</p>
+                                        </div>
+                                    </div>
+                                    <div class="columns is-multiline">
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <p><span class="label has-text-white">Job:</span>Senior Oracle Technical Consultant</p>
+                                        </div>
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <p><span class="label has-text-white">Phone Number:</span>+62-8211487-8986
+                                                <span class="icon"><i class="fab fa-whatsapp"></i></span>
+                                            </p>
+                                        </div>
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <p><span class="label has-text-white">Email:</span>tri.hantoro@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-header is-shadowless">
+                                <p class="card-header-title title has-text-white">An Introduction ...</p>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">    
+                                    <p>Experienced Oracle Application Technical Consultant with a demonstrated history of working in manufacturing, banking, information technology, and services industry. 
+                                        Strong information and technology professional with a bachelor's degree focusing on electrical engineering at the University of Indonesia. Interested on web development and data science works.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight-with-navbar" id="educations">
+        <div class="hero-body">
+            <div class="container px-6">
+                <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+                    <div class="column">
+                        <div class="card is-shadowless">
+                            <div class="card-header has-background-black">
+                                <p class="card-header-title has-text-info">Skill Sets</p>
+                            </div>
+                            <div class="card-content has-background-black">
+                                <p class="label is-size-6 has-text-white has-text-weight-normal">Oracle Development Tools</p>
+                                <progress class="progress is-info" value="100" max="100">10</progress>
+                                <p class="label is-size-6 has-text-white has-text-weight-normal">Oracle EBS Modules: Finance, Procurements, Inventory, &amp; HRMS</p>
+                                <progress class="progress is-info" value="100" max="100">10</progress>
+                                <p class="label is-size-6 has-text-white has-text-weight-normal">SQL and PL/SQL</p>
+                                <progress class="progress is-info" value="100" max="100">10</progress>
+                                <p class="label is-size-6 has-text-white has-text-weight-normal">Web Development Language (HTML, CSS, Javascript)</p>
+                                <progress class="progress is-info" value="80" max="100">8</progress>
+                                <p class="label is-size-6 has-text-white has-text-weight-normal">Programming Languages: Python &amp; JAVA</p>
+                                <progress class="progress is-info" value="60" max="100">6</progress>
+                                <p class="label is-size-6 has-text-white has-text-weight-normal">Web Development Frameworks: Django, NodeJS, &amp; Flask </p>
+                                <progress class="progress is-info" value="60" max="100">6</progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4-tablet">
+                        <div class="card is-shadowless" style="background-color: yellow;">
+                            <div class="card-content has-text-centered">
+                                <p class="title is-size-5 has-text-weight-bold">University of Indonesia <br>Graduate</p>
+                            </div>
+                            <div class="card-image px-4">
+                                <figure class="image is-square">
+                                    <img class="is-rounded has-background-black px-4 py-2" src="media/Makara_UI.png" alt="University of Indonesia" />
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-centered">
+                                <p class="title is-size-5">Bachelor of Engineering <br>Electrical Department</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight-with-navbar" id="experiences">
+        <div class="hero-body">
+            <div class="container">
+            </div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
 </body>
 </html>
